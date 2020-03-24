@@ -44,7 +44,7 @@ class Song
   def self.artist_count
     new_artists = []
     @@artist_count.each do |artist|
-      if !new_artists.include(artist)
+      if !new_artists.include?(artist)
         new_artists << artist
       end
     end
