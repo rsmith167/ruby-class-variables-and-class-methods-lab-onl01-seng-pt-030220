@@ -33,7 +33,13 @@ class Song
     @@count
   end
   def self.artists
-    @@artists
+    new_artists = []
+    @@artists.each do |artist|
+      if !new_artists.include?(artist)
+        new_artists << artist
+      end
+    end
+      new_artists
   end
   def self.genres
     @@genres
@@ -42,13 +48,7 @@ class Song
     @@genre_count
   end
   def self.artist_count
-    new_artists = []
-    @@artist_count.each do |artist|
-      if !new_artists.include?(artist)
-        new_artists << artist
-      end
-    end
-      new_artists
+    
   end
   
 end
