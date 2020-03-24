@@ -13,14 +13,10 @@ class Song
     @name = name
     @artist = artist
     @genre = genre
-    if @@artists.length == 0
-    @@artists.push(@artist)
-  else 
-    @@artists << @artist
+    if !@@artists.include?(artist)
+    @@artists << artist
   end
-    if @@genres.length == 0
-      @@genres = genre
-    else
+    if !@@genres.include?(genre)
       @@genres << genre
     end
     if  @@genre_count[@genre] != nil
