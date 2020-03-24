@@ -14,7 +14,7 @@ class Song
     @artist = artist
     @genre = genre
     if @@artists.length == 0
-    @@artists = artist
+    @@artists.push(artist)
   else 
     @@artists << artist
   end
