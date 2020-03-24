@@ -8,8 +8,11 @@ class Song
   
   attr_accessor :name, :artist, :genre
   
-  def initialize(name, artists, genre)
+  def initialize(name, artist, genre)
     @@song_instances +=1
+    :name = name
+    :artist = artist
+    :genre = genre
     @@artists << :artist
     @@genres << :genre
     if  @@genre_count[:genre].length  >= 0
