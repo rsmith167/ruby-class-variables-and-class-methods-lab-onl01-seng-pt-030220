@@ -13,10 +13,10 @@ class Song
     @name = name
     @artist = artist
     @genre = genre
-    if @@artists != nil
-    @@artists << artist
-  else 
+    if @@artists.length = 0
     @@artists = artist
+  else 
+    @@artists << artist
   end
     if @@genres != nil
       @@genres << genre
