@@ -18,9 +18,9 @@ class Song
       @@genre_count[:genre] = 1
     end
     if @@artist_count[:name] >= 0
-      @@artist_count[name] = @@artist_count[:name] + 1
+      @@artist_count[:name] = @@artist_count[:name] + 1
     else
-      @@artist_count[name] = 1
+      @@artist_count[:name] = 1
     end
   end
   
