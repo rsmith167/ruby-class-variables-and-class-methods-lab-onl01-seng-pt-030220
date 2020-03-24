@@ -22,10 +22,10 @@ class Song
     else
       @@genre_count[@genre] = 1
     end
-    if @@artist_count[@name] != nil
-      @@artist_count[@name] = @@artist_count[@name] + 1
+    if @@artist_count[@artist] != nil
+      @@artist_count[@artist] = @@artist_count[@artist] + 1
     else
-      @@artist_count[@name] = 1
+      @@artist_count[@artist] = 1
     end
   end
   
