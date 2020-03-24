@@ -10,20 +10,20 @@ class Song
   
   def initialize(name, artist, genre)
     @@song_instances +=1
-    :name = name
-    :artist = artist
-    :genre = genre
-    @@artists << :artist
-    @@genres << :genre
-    if  @@genre_count[:genre].length  >= 0
-      @@genre_count[:genre] = @@genre_count[:genre] + 1
+    @name = name
+    @artist = artist
+    @genre = genre
+    @@artists << @artist
+    @@genres << @genre
+    if  @@genre_count[@genre].length  >= 0
+      @@genre_count[@genre] = @@genre_count[@genre] + 1
     else
-      @@genre_count[:genre] = 1
+      @@genre_count[@genre] = 1
     end
-    if @@artist_count[:name] >= 0
-      @@artist_count[:name] = @@artist_count[:name] + 1
+    if @@artist_count[@name] >= 0
+      @@artist_count[@name] = @@artist_count[@name] + 1
     else
-      @@artist_count[:name] = 1
+      @@artist_count[@name] = 1
     end
   end
   
